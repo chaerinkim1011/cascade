@@ -1,5 +1,5 @@
 # cascade
-team project
+2팀 프로젝트 입니다
 
 ## team member
 ### 프밍
