@@ -231,6 +231,7 @@ GameObject:
   m_Component:
   - component: {fileID: 201887114}
   - component: {fileID: 201887115}
+  - component: {fileID: 201887116}
   m_Layer: 4
   m_Name: GameLevel
   m_TagString: Untagged
@@ -254,7 +255,7 @@ Transform:
   - {fileID: 668320769}
   - {fileID: 1533709257}
   - {fileID: 1239944171}
-  - {fileID: 285929537}
+  - {fileID: 4921833466996426943}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &201887115
@@ -273,6 +274,19 @@ MonoBehaviour:
   - {fileID: 1533709257}
   - {fileID: 1239944171}
   scrollSpeed: 2
+--- !u!114 &201887116
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 201887113}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e9b9577aada5c8346ab6db1bfabb39d7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  stone: {fileID: 6712304341891788444, guid: 04b4435564405394baa2e989f06c0b17, type: 3}
 --- !u!1 &218006210
 GameObject:
   m_ObjectHideFlags: 0
@@ -384,11 +398,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 227633113}
   m_CullTransparentMesh: 1
---- !u!4 &285929537 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 8961144723941466344, guid: d9941ba997002f74195da73fb71210d1, type: 3}
-  m_PrefabInstance: {fileID: 4921833466996426942}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &393185014
 GameObject:
   m_ObjectHideFlags: 0
@@ -3358,6 +3367,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 8337181562433780510, guid: d9941ba997002f74195da73fb71210d1, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.98
+      objectReference: {fileID: 0}
     - target: {fileID: 8961144723941466344, guid: d9941ba997002f74195da73fb71210d1, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -3403,6 +3416,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d9941ba997002f74195da73fb71210d1, type: 3}
+--- !u!4 &4921833466996426943 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 8337181562433780510, guid: d9941ba997002f74195da73fb71210d1, type: 3}
+  m_PrefabInstance: {fileID: 4921833466996426942}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &8304179339002502787
 PrefabInstance:
   m_ObjectHideFlags: 0

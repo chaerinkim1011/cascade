@@ -64,6 +64,8 @@
     <Compile Include="Assets\Scripts\UIGameResultPoppup.cs" />
     <Compile Include="Assets\Scripts\UISettingsPopup.cs" />
     <Compile Include="Assets\Scripts\SpriteAnimator.cs" />
+    <Compile Include="Assets\Scripts\stone.cs" />
+    <Compile Include="Assets\GameManager.cs" />
     <Compile Include="Assets\UI\popup.cs" />
     <Compile Include="Assets\Scripts\Player.cs" />
     <Compile Include="Assets\Scripts\WaterfallBackgound.cs" />

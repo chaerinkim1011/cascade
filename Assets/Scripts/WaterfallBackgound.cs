@@ -3,7 +3,7 @@ using UnityEngine;
 public class WaterfallBackground : MonoBehaviour
 {
     public Transform[] groups; // 반드시 두 개 필요
-    public float scrollSpeed = 2000f;
+    public float scrollSpeed = 2;
 
     private float groupHeight;
     private Transform currentGroup;
