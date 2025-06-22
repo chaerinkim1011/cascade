@@ -1,28 +1,33 @@
 using UnityEngine;
 using UnityEngine.UI;
 
-public class SpriteAnimator : MonoBehaviour
+public class SpriteFrameAnimator : MonoBehaviour
 {
-    SpriteRenderer spriteRenderer;
-    public Sprite[] frames;
-    public float frameRate = 0.1f;
+    public Sprite[] frames;           // 프레임 이미지 배열 (Inspector에서 넣기)
+    public float frameTime = 0.3f;    // 각 프레임 지속 시간 (초)
 
+    private Image image;
     private int currentFrame = 0;
     private float timer = 0f;
 
-    private void Awake()
+    void Start()
     {
-       spriteRenderer = GetComponent<SpriteRenderer>();
+        image = GetComponent<Image>();
+        if (frames.Length > 0)
+            image.sprite = frames[0];
     }
+
     void Update()
     {
+        if (frames.Length == 0) return;
+
         timer += Time.deltaTime;
 
-        if (timer >= frameRate)
+        if (timer >= frameTime)
         {
             timer = 0f;
             currentFrame = (currentFrame + 1) % frames.Length;
-            spriteRenderer.sprite = frames[currentFrame];
+            image.sprite = frames[currentFrame];
         }
     }
 }

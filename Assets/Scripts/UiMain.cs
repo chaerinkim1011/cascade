@@ -2,7 +2,7 @@ using UnityEngine;
 using TMPro;
 using System.Runtime.CompilerServices;
 
-public class UiMain : MonoBehaviour
+public class UIMain : MonoBehaviour
 {
     [SerializeField] private TextMeshProUGUI scoreValueText;
 
