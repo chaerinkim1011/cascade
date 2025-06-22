@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: a9913ccded3eb13488f3af5ba545a122
+guid: cc3575daf8520284585bb5cc7c89fc35
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 6326768502604925231
-    second: pj-bk-Sheet_0
+      213: -6360116305524664329
+    second: 2-1_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -126,13 +126,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: pj-bk-Sheet_0
+      name: 2-1_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 600
-        height: 480
+        x: 116
+        y: 108
+        width: 394
+        height: 292
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -141,8 +141,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: f2985e5be623dc750800000000000000
-      internalID: 6326768502604925231
+      spriteID: 7f7580fdae35cb7a0800000000000000
+      internalID: -6360116305524664329
       vertices: []
       indices: 
       edges: []
