@@ -4,29 +4,53 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
-    public float speed = 20;
-    private Rigidbody2D rb;
+    private Rigidbody2D rigidbody;
+
+    private float speed = 10;
+
+    private float horizontal;
+    public int maxHP = 3;
+    private int currentHP;
 
     void Start()
     {
-        rb = GetComponent<Rigidbody2D>();
+        rigidbody = GetComponent<Rigidbody2D>();
+        currentHP = maxHP;
     }
 
     void Update()
     {
-        var moveHorizontal = Input.GetAxis("Horizontal");
-        var moveVertical = Input.GetAxis("Vertical");
+        horizontal = Input.GetAxis("Horizontal");
 
-        var movement = new Vector3(moveHorizontal, 0, moveVertical);
-
-        rb.AddForce(movement * speed);
+        PlayerMove();
+        ScreenChk();
     }
 
-    void OnTriggerEnter(Collider other)
+    private void PlayerMove()
     {
-        if (other.gameObject.CompareTag("Pick Up"))
+        rigidbody.velocity = new Vector2(horizontal*speed, rigidbody.velocity.y);
+    }
+   
+    private void ScreenChk()
+    {
+        Vector3 worlpons = Camera.main.WorldToViewportPoint(this.transform.position);
+        if (worlpons.x < 0.05f) worlpons.x = 0.05f;
+        if (worlpons.x > 0.95f) worlpons.x = 0.95f;
+        this.transform.position = Camera.main.ViewportToWorldPoint(worlpons);
+    }
+    public void TakeDamage(int damage)
+    {
+        currentHP -= damage;
+        Debug.Log("플레이어 HP: " + currentHP);
+
+        if (currentHP <= 0)
         {
-            other.gameObject.SetActive(false);
+            Die();
         }
+    }
+    private void Die()
+    {
+        Debug.Log("플레이어 사망");
+        Destroy(gameObject);
     }
 }
