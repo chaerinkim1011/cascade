@@ -23,7 +23,7 @@ public class GameManager : MonoBehaviour
         while (true)
         {
             CreateStone();
-            yield return new WaitForSeconds(1);
+            yield return new WaitForSeconds(2);
         }
     }
     private void CreateStone()
@@ -31,5 +31,11 @@ public class GameManager : MonoBehaviour
         Vector3 pos = Camera.main.ViewportToWorldPoint(new Vector3(UnityEngine.Random.Range(0.0f, 1.0f), 1.1f, 0));
         pos.z = 0.0f;
         Instantiate(stone,pos,Quaternion.identity);
+        SpriteRenderer sr = stone.GetComponent<SpriteRenderer>();
+        if (sr != null)
+        {
+            sr.sortingOrder = stoneOrder++;
+        }
     }
+    private int stoneOrder = 5;
 }
